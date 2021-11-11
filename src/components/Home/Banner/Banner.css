@@ -1,0 +1,26 @@
+.banner-span-text-style::before {
+ 
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+
+}
+.bg{
+  background-image: url("https://i.ibb.co/Dk4v7Wv/marek-prygiel-7-RLzt-M4-Kdc-E-unsplash-1-1.jpg");
+}
+@media only screen and (max-width: 992px) {
+  .banner-span-text-style::before {
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .banner-span-text-style::before {
+    bottom: -20px;
+  }
+}
+
+
+
+

@@ -1,0 +1,104 @@
+.lo{
+  height: 100vh;
+}
+  .bg{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M 0%2c37 C 57.6%2c84.2 172.8%2c270.2 288%2c273 C 403.2%2c275.8 460.8%2c71 576%2c51 C 691.2%2c31 748.8%2c170.2 864%2c173 C 979.2%2c175.8 1036.8%2c55 1152%2c65 C 1267.2%2c75 1382.4%2c191.4 1440%2c223L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c301 C 96%2c349.8 288%2c524 480%2c545 C 672%2c566 768%2c403.4 960%2c406 C 1152%2c408.6 1344%2c527.6 1440%2c558L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  }
+
+  .logo{
+   
+  width: 200px;
+  height: 100px;
+  margin-bottom: 20px;
+  }
+
+.menu-handle {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1126px) {
+    .menue {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+    #responsive-menus-no-toggle {
+      left: -100%;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(
+          rgba(120, 54, 15, 0.645),
+          rgba(120, 54, 15, 0.645)
+        ),
+        url(https://i.ibb.co/hZ3yzvx/sssssssssss.png) no-repeat top center;
+      background-attachment: fixed;
+      background-size: cover;
+      transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+    }
+  
+    div#responsive-menus-no-toggle {
+      width: 90%;
+      text-align: right;
+      display: flex;
+      justify-content: flex-end;
+    }
+    #responsive-menus-no-toggle ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+  
+    #responsive-menus {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: linear-gradient(
+          rgba(120, 54, 15, 0.645),
+          rgba(120, 54, 15, 0.645)
+        ),
+        url(https://i.ibb.co/hZ3yzvx/sssssssssss.png) no-repeat top center;
+      background-attachment: fixed;
+      background-size: cover;
+      transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+    }
+    #responsive-menus ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+    }
+    .menu-link {
+      color: #fff !important;
+      margin-top: 1rem;
+      margin-left: 20 px;
+    }
+  
+    /*----------Responsive Toggle Menu Icon--------*/
+    .menu-handle {
+      display: block;
+      font-size: 2rem;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+    }
+    .menu-handle:hover {
+      color: #e83a3b;
+    }
+  }

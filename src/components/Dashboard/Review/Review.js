@@ -8,7 +8,7 @@ const Review = () => {
       const { register, handleSubmit, reset } = useForm();
       const onSubmit = data => {
           console.log(data);
-          axios.post('http://localhost:5000/ratings', data)
+          axios.post('https://desolate-cove-99144.herokuapp.com/ratings', data)
           .then(res=>{
               if(res.data.insertedId){
                 swal("Wow!", "You're product has been added!", "success");

@@ -4,11 +4,15 @@ import useAuth from '../../../hooks/useAuth';
 
 const AdminRoute = ({ children, ...rest }) => {
     const { user, admin, isLoading } = useAuth();
-    if (isLoading) { return <div class="flex justify-center items-center">
-    <div
-      class="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"
-    ></div>
-  </div> }
+    if (isLoading) {
+        return (
+            <div className="h-screen w-screen flex items-center justify-center">
+                <div className="spinner-border w-80 h-80" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        )
+    }
     return (
         <Route
             {...rest}
@@ -18,7 +22,7 @@ const AdminRoute = ({ children, ...rest }) => {
                 ) : (
                     <Redirect
                         to={{
-                            pathname: "/",
+                            pathname: "/dashboard",
                             state: { from: location }
                         }}
                     />

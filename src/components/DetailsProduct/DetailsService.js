@@ -14,7 +14,7 @@ const DetailsService = () => {
     const [imgUrl, setImgUrl] = useState('')
     const {user} = useAuth()
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://desolate-cove-99144.herokuapp.com/services/${serviceId}`)
         .then(res => res.json())
         .then(data => setService(data))
         .catch(error => console.log(error))
@@ -27,7 +27,7 @@ const DetailsService = () => {
         data.price = price;
         data.description = description;
         data.url = url
-        axios.post('http://localhost:5000/addOrders', data)
+        axios.post('https://desolate-cove-99144.herokuapp.com/addOrders', data)
         .then(res => {
             if(res.data.insertedId){
                 swal('Wow!', 'You\'r has been added.', 'success')

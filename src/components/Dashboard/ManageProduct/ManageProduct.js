@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [products, setProducts] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/products')
+        fetch('https://desolate-cove-99144.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
         .catch(error => console.log(error));
@@ -23,7 +23,7 @@ const ManageProduct = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url =  `http://localhost:5000/Products/${id}`;
+                const url =  `https://desolate-cove-99144.herokuapp.com/Products/${id}`;
                 fetch(url, {
                     method: 'delete'
                 })
@@ -55,9 +55,7 @@ const ManageProduct = () => {
           <img className="min-h-full max-w-full transform scale-100 hover:scale-110 transition-all duration-500 ease-linear cursor-pointer" src={product.url} alt={product.name} />
         </div>
         <h2 className="mt-3 text-2xl font-medium">{product.name}</h2>
-        <div className="text-2xl py-3 text-gray-900">TAKA <br />
-          <span className="font-medium text-">{product.price}</span> 
-          <span className="text-lg font-semibold text-gray-900"> /Night</span>
+        <div className="text-2xl py-3 text-gray-900">TAKA {product.price}<br />
         </div>
         <div className="">
             {/* This is Divider */}

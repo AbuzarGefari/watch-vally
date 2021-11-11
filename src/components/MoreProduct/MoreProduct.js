@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const MoreProduct = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-          fetch('http://localhost:5000/products')
+          fetch('https://desolate-cove-99144.herokuapp.com/products')
           .then(res => res.json())
           .then(data => setProducts(data))
           .catch(error => console.log(error));
@@ -27,7 +27,7 @@ const MoreProduct = () => {
                 {/* This is Divider */}
             </div>
             <p className="pt-3 pb-8 text-md text-gray-700 font-medium">{product.description.substring(0, 130)} <br /> </p>
-            <Link className="smooth-animation bg-indigo-700   hover:bg-indigo-900 text-indigo-50 hover:text-yellow-50 border-2 py-2 px-8" to={`/products/${product._id}`}>Booking Now</Link>
+            <Link className="smooth-animation bg-indigo-700   hover:bg-indigo-900 text-indigo-50 hover:text-yellow-50 border-2 py-2 px-8" to={`/products/${product._id}`}>Purchase Now</Link>
         </div>
 
 

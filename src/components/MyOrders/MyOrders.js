@@ -10,9 +10,10 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([]);
     const {user} = useAuth()
     useEffect(()=>{
-        fetch('http://localhost:5000/addOrders')
+        fetch('https://desolate-cove-99144.herokuapp.com/addOrders')
         .then(res => res.json())
-        .then(data => setMyOrders(data));
+        .then(data => setMyOrders(data))
+        .catch(error=> console.log(error))
     }, [myOrders])
     // ----------------Handle My Orders------------------
     const handleDelete = id => {
@@ -25,7 +26,7 @@ const MyOrders = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url =  `http://localhost:5000/addOrders/${id}`;
+                const url =  `https://desolate-cove-99144.herokuapp.com/addOrders/${id}`;
                 fetch(url, {
                     method: 'DELETE'
                 })

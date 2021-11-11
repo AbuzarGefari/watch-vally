@@ -15,7 +15,7 @@ const Product = ({product}) => {
                 {/* This is Divider */}
             </div>
             <p className="pt-3 pb-8 text-md text-gray-700 font-medium">{description.substring(0, 130)} <br /> {description.substring(0, 30)}</p>
-            <Link className="smooth-animation bg-indigo-700   hover:bg-indigo-900 text-indigo-50 hover:text-yellow-50 border-2 py-2 px-8" to={`/products/${_id}`} product={product}>Booking Now</Link>
+            <Link className="smooth-animation bg-indigo-700   hover:bg-indigo-900 text-indigo-50 hover:text-yellow-50 border-2 py-2 px-8" to={`/products/${_id}`} product={product}>Purchase Now</Link>
             
         </div>
     );

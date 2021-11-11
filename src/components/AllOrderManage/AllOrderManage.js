@@ -6,7 +6,7 @@ import swal from 'sweetalert';
 const AllOrderManage = () => {
     const [orders, setOrders] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/addOrders')
+        fetch('https://desolate-cove-99144.herokuapp.com/addOrders')
         .then(res => res.json())
         .then(data => setOrders(data));
 
@@ -23,7 +23,7 @@ const AllOrderManage = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url =  `http://localhost:5000/addOrders/${id}`;
+                const url =  `https://desolate-cove-99144.herokuapp.com/addOrders/${id}`;
                 fetch(url, {
                     method: 'delete'
                 })
@@ -50,7 +50,7 @@ const AllOrderManage = () => {
           })
           .then((willDelete) => {
             if (willDelete) {
-                const url =  `http://localhost:5000/addOrders/${id}`;
+                const url =  `https://desolate-cove-99144.herokuapp.com/addOrders/${id}`;
                 fetch(url, {
                     method: 'PUT'
                 })

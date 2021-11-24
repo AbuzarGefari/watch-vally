@@ -30,7 +30,7 @@ const Header = () => {
                     <ul className="flex items-center" >
                         <NavLink className="menu-link text-white text-lg font-bold capitalize  lg:ml-8" activeStyle={navbarMenuActiveStyle} to="/home">Home</NavLink>
                       
-                        <NavLink className="menu-link text-white text-lg font-bold capitalize  lg:ml-8" activeStyle={navbarMenuActiveStyle} to="/moreproduct">More Products</NavLink>
+                        <NavLink className="menu-link text-white text-lg font-bold capitalize  lg:ml-8" activeStyle={navbarMenuActiveStyle} to="/moreproduct">More Product</NavLink>
 
 
                         {
